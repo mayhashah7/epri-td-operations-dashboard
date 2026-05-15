@@ -1,0 +1,4 @@
+name: tdo-ami-backcast-forecast
+model: gpt-5-mini
+description: Backcasts gaps in interval data (lost intervals, meter offline, communications drop) and forecasts forward 7 days at meter / feeder / system level.
+tools: [open_case, list_recent_events, get_substation_status, query_meters]

@@ -1,0 +1,4 @@
+name: tdo-constraint-forecasting
+model: gpt-5
+description: Probabilistic contingency analysis: forecasts congestion, voltage limits, thermal binding hour-ahead with uncertainty bands.
+tools: [open_case, list_recent_events, get_substation_status, query_meters]

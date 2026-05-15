@@ -1,0 +1,4 @@
+name: tdo-oms-knowledge-retrieval
+model: gpt-5-chat
+description: Conversational retrieval of OMS data: 'show me all storm-related rear-lot outages last June'. Returns ETR-ready summaries.
+tools: [open_case, list_recent_events, get_substation_status, query_meters]
