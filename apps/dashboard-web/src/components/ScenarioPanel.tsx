@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { postJson, type Substation } from '../lib/api';
 
 const SCENARIOS = [
-  { id: 'storm-outage',     label: '⛈️ Storm Outage',         agent: 'outage-detection',       hint: 'Knocks a feeder offline' },
-  { id: 'theft',            label: '🕵️ Theft Pattern',        agent: 'theft-detection',        hint: 'Plant tampers + flat reads' },
-  { id: 'der-overvoltage',  label: '☀️ Solar Backfeed',       agent: 'der-management',         hint: 'Volt-VAR risk on secondaries' },
-  { id: 'heat-wave',        label: '🔥 Heat Wave',            agent: 'demand-response',        hint: 'Trigger DR cohort selection' },
-  { id: 'transformer-aging',label: '🔧 Transformer Aging',    agent: 'predictive-maintenance', hint: 'Score asset health' },
-  { id: 'cyber-burst',      label: '🛡️ Cyber Anomaly',        agent: 'grid-cybersecurity',     hint: 'Unauthorized firmware queries' },
-  { id: 'ev-surge',         label: '🔌 EV Plug-in Surge',     agent: 'ev-load-orchestration',  hint: 'Evening EV charging burst' },
-  { id: 'weather-alert',    label: '🌦️ Weather Alert',         agent: 'weather-impact',         hint: 'Heat warning + storm watch' },
+  { id: 'price-spike', label: 'LMP Spike Forecast', agent: 'tdo-market-price-forecast', hint: 'Heat-wave & gen retirement → forecast LMPs next 48h' },
+  { id: 'ami-gap', label: 'AMI Gap Recovery', agent: 'tdo-ami-backcast-forecast', hint: 'Sub S-07 had 4h comms outage — backcast intervals' },
+  { id: 'outage-burst', label: 'Domestic Outage Burst', agent: 'tdo-domestic-outage-detection', hint: '1,200 last-gasps in 90s — locate the fault' },
+  { id: 'storm-incoming', label: 'Storm Incoming', agent: 'tdo-extreme-weather-forecast', hint: 'Cat-2 hurricane 36h out — estimate circuit impact' },
+  { id: 'storm-coord', label: 'Storm Coordination', agent: 'tdo-storm-response-coordination', hint: 'Pre-stage 14 mutual-aid crews' },
+  { id: 'constraint-warning', label: 'Contingency Warning', agent: 'tdo-constraint-forecasting', hint: 'N-1 risk on 230kV ring next hour' },
+  { id: 'oms-query', label: 'OMS Q&A', agent: 'tdo-oms-knowledge-retrieval', hint: 'Show all rear-lot outages > 4h since Jan' },
+  { id: 'reliability-driver', label: 'Reliability Driver Audit', agent: 'tdo-reliability-index-analytics', hint: 'Decompose SAIDI YTD by cause' },
 ];
 
 export function ScenarioPanel({ onRan, substations }: { onRan: () => void; substations: Substation[] }) {
@@ -47,7 +47,7 @@ export function ScenarioPanel({ onRan, substations }: { onRan: () => void; subst
             title={s.hint}
           >
             <div className="text-xs font-medium text-grid-accent leading-tight">{busy === s.id ? '⏳' : s.label}</div>
-            <div className="text-xs text-grid-info font-mono mt-0.5">→ ami-{s.agent}</div>
+            <div className="text-xs text-grid-info font-mono mt-0.5">→ {s.agent}</div>
             <div className="text-xs text-slate-500 mt-0.5 line-clamp-1">{s.hint}</div>
           </button>
         ))}
