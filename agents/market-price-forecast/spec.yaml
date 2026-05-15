@@ -1,4 +1,4 @@
 name: tdo-market-price-forecast
 model: gpt-5-mini
-description: Forecasts day-ahead and real-time LMPs from demand projections, generation availability, weather, and historical patterns. Adapts to market-rule changes.
+description: "Forecasts day-ahead and real-time LMPs from demand projections, generation availability, weather, and historical patterns. Adapts to market-rule changes."
 tools: [open_case, list_recent_events, get_substation_status, query_meters]

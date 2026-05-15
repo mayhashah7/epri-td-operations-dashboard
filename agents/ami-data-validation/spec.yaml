@@ -1,4 +1,4 @@
 name: tdo-ami-data-validation
 model: gpt-5-mini
-description: Validation, estimation, editing on AMI streams. Identifies stuck registers, time skew, multi-meter mismatches, NTL-suggestive anomalies.
+description: "Validation, estimation, editing on AMI streams. Identifies stuck registers, time skew, multi-meter mismatches, NTL-suggestive anomalies."
 tools: [open_case, list_recent_events, get_substation_status, query_meters]

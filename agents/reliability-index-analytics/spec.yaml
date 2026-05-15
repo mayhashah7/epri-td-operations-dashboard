@@ -1,4 +1,4 @@
 name: tdo-reliability-index-analytics
 model: gpt-5
-description: Decomposes SAIDI/SAIFI/CAIDI into causes (storm, equipment, vegetation, animal) and forecasts impact of CAPEX choices on indices.
+description: "Decomposes SAIDI/SAIFI/CAIDI into causes (storm, equipment, vegetation, animal) and forecasts impact of CAPEX choices on indices."
 tools: [open_case, list_recent_events, get_substation_status, query_meters]

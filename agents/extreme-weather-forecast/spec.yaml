@@ -1,4 +1,4 @@
 name: tdo-extreme-weather-forecast
 model: gpt-5
-description: Maps NOAA / NWS forecasts onto circuits and estimates probable damage / restoration windows based on prior storm signatures.
+description: "Maps NOAA / NWS forecasts onto circuits and estimates probable damage / restoration windows based on prior storm signatures."
 tools: [open_case, list_recent_events, get_substation_status, query_meters]
