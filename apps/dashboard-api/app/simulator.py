@@ -320,3 +320,14 @@ SCENARIOS = {
     "oms-query": scenario_oms_query,
     "reliability-driver": scenario_reliability_driver,
 }
+
+SCENARIO_META = [
+    {"id": "price-spike",        "label": "💹 LMP Spike",           "agent": "tdo-market-price-forecast",       "hint": "Heat-wave & gen retirement → forecast LMPs next 48h"},
+    {"id": "ami-gap",            "label": "📈 AMI Gap Recovery",    "agent": "tdo-ami-backcast-forecast",        "hint": "Sub S-07 had 4h comms outage — backcast intervals"},
+    {"id": "outage-burst",       "label": "🏠 Outage Burst",        "agent": "tdo-domestic-outage-detection",    "hint": "1,200 last-gasps in 90s — locate the fault"},
+    {"id": "storm-incoming",     "label": "⛈️ Storm Incoming",      "agent": "tdo-extreme-weather-forecast",     "hint": "Cat-2 hurricane 36h out — estimate circuit impact"},
+    {"id": "storm-coord",        "label": "🌪️ Storm Coordination",  "agent": "tdo-storm-response-coordination",  "hint": "Pre-stage 14 mutual-aid crews"},
+    {"id": "constraint-warning", "label": "🚧 Contingency Warning", "agent": "tdo-constraint-forecasting",       "hint": "N-1 risk on 230kV ring next hour"},
+    {"id": "oms-query",          "label": "📚 OMS Q&A",             "agent": "tdo-oms-knowledge-retrieval",      "hint": "Show all rear-lot outages > 4h since Jan"},
+    {"id": "reliability-driver", "label": "📐 Reliability Audit",   "agent": "tdo-reliability-index-analytics",  "hint": "Decompose SAIDI YTD by cause"},
+]
